@@ -1,14 +1,22 @@
 package com.testMasivian.Apuestas.model;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-@Entity
-public class Roulette {
-	@Id
+import java.io.Serializable;
+public class Roulette implements Serializable {
 	int idRoulette;
-	@Column(name = "state")
 	boolean state;
-	
+	String openDate;
+	String closeDate;
+	public String getOpenDate() {
+		return openDate;
+	}
+	public void setOpenDate(String openDate) {
+		this.openDate = openDate;
+	}
+	public String getCloseDate() {
+		return closeDate;
+	}
+	public void setCloseDate(String closeDate) {
+		this.closeDate = closeDate;
+	}
 	public int getIdRoulette() {
 		return idRoulette;
 	}
@@ -21,5 +29,4 @@ public class Roulette {
 	public void setState(boolean state) {
 		this.state = state;
 	}
-
 }
